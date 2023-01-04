@@ -1,0 +1,23 @@
+{% extends 'theme.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+{% block content %}
+    <div class="container-fluid">
+        <main class="tm-main">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" class="btn btn-dark btn-block" value="Login"/>
+            </form>
+            <footer class="row tm-row">
+                <hr class="col-12">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">Shifana</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2023 Magic Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
+    </div>
+    {% endblock content %}
